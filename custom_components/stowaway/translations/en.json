@@ -10,7 +10,7 @@
           "verify_ssl": "Verify the HTTPS certificate"
         },
         "data_description": {
-          "url": "The dashboard address, for example 192.168.1.2:8880 or https://stowaway.myhome.duckdns.org:8443",
+          "url": "The server's address and the dashboard port (8880 unless you changed it). If you open Stowaway over HTTPS, include https:// and its HTTPS port.",
           "token": "Starts with stw_",
           "verify_ssl": "Turn off if Stowaway uses its own (self-signed) certificate"
         }
