@@ -1,0 +1,119 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Stowaway",
+        "description": "Create a token in the Stowaway dashboard under **Integrations → Home Assistant → API tokens**.",
+        "data": {
+          "url": "Stowaway address",
+          "token": "API token",
+          "verify_ssl": "Verify the HTTPS certificate"
+        },
+        "data_description": {
+          "url": "The dashboard address, for example 192.168.1.2:8880 or https://stowaway.myhome.duckdns.org:8443",
+          "token": "Starts with stw_",
+          "verify_ssl": "Turn off if Stowaway uses its own (self-signed) certificate"
+        }
+      },
+      "reauth_confirm": {
+        "title": "New Stowaway token needed",
+        "description": "The token for {url} stopped working (it may have been revoked). Create a new one in the Stowaway dashboard.",
+        "data": {
+          "token": "API token"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Couldn't reach Stowaway at that address. Check the address and port.",
+      "invalid_auth": "Stowaway refused the token, or Home Assistant isn't on the same home network as Stowaway.",
+      "unknown": "Stowaway gave an unexpected answer. See the Home Assistant log for details."
+    },
+    "abort": {
+      "already_configured": "This Stowaway is already set up.",
+      "reauth_successful": "The new token works."
+    }
+  },
+  "entity": {
+    "switch": {
+      "awake": {
+        "name": "Awake"
+      },
+      "dont_wake": {
+        "name": "Don't wake"
+      }
+    },
+    "sensor": {
+      "status": {
+        "name": "Status",
+        "state": {
+          "running": "Awake",
+          "sleeping": "Asleep",
+          "starting": "Starting",
+          "stopping": "Going to sleep",
+          "updating": "Updating",
+          "maintenance": "Maintenance",
+          "failed": "Failed to start",
+          "stopped": "Stopped"
+        }
+      },
+      "sleeps_at": {
+        "name": "Sleeps at"
+      },
+      "next_restart": {
+        "name": "Next restart"
+      },
+      "apps_asleep": {
+        "name": "Apps asleep"
+      },
+      "memory_freed": {
+        "name": "Memory freed"
+      }
+    },
+    "binary_sensor": {
+      "maintenance_running": {
+        "name": "Maintenance running"
+      },
+      "update_available": {
+        "name": "Update ready"
+      }
+    },
+    "button": {
+      "restart": {
+        "name": "Restart now"
+      },
+      "keep_awake_hour": {
+        "name": "Keep awake 1 hour"
+      }
+    }
+  },
+  "services": {
+    "keep_awake": {
+      "name": "Keep awake",
+      "description": "Keep an app awake for a while, or until released. Also switches waking back on.",
+      "fields": {
+        "minutes": {
+          "name": "Minutes",
+          "description": "How long to keep it awake."
+        },
+        "forever": {
+          "name": "Until released",
+          "description": "Keep it awake until the Release action is used."
+        }
+      }
+    },
+    "release": {
+      "name": "Release",
+      "description": "End a keep-awake, so the app can go to sleep when idle."
+    },
+    "sleep": {
+      "name": "Sleep",
+      "description": "Put an app to sleep now.",
+      "fields": {
+        "block": {
+          "name": "Don't wake",
+          "description": "Also stop visitors from waking it until it's switched back on."
+        }
+      }
+    }
+  }
+}

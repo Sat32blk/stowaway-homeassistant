@@ -1,0 +1,51 @@
+{
+  "entity": {
+    "switch": {
+      "awake": {
+        "default": "mdi:power-sleep",
+        "state": {
+          "on": "mdi:power"
+        }
+      },
+      "dont_wake": {
+        "default": "mdi:bell-ring-outline",
+        "state": {
+          "on": "mdi:sleep"
+        }
+      }
+    },
+    "sensor": {
+      "status": {
+        "default": "mdi:docker"
+      },
+      "sleeps_at": {
+        "default": "mdi:timer-sand"
+      },
+      "next_restart": {
+        "default": "mdi:calendar-refresh"
+      },
+      "apps_asleep": {
+        "default": "mdi:sleep"
+      },
+      "memory_freed": {
+        "default": "mdi:memory"
+      }
+    },
+    "button": {
+      "keep_awake_hour": {
+        "default": "mdi:coffee"
+      }
+    }
+  },
+  "services": {
+    "keep_awake": {
+      "service": "mdi:coffee"
+    },
+    "release": {
+      "service": "mdi:coffee-off"
+    },
+    "sleep": {
+      "service": "mdi:power-sleep"
+    }
+  }
+}

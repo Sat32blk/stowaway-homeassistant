@@ -1,0 +1,14 @@
+{
+  "domain": "stowaway",
+  "name": "Stowaway",
+  "codeowners": [
+    "@Sat32blk"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/Sat32blk/stowaway-homeassistant",
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/Sat32blk/stowaway-homeassistant/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
