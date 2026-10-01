@@ -1,9 +1,10 @@
 # Stowaway for Home Assistant
 
-[![Validate](https://github.com/Sat32blk/stowaway-homeassistant/actions/workflows/validate.yml/badge.svg)](https://github.com/Sat32blk/stowaway-homeassistant/actions/workflows/validate.yml)
+[![Validate](https://github.com/Sat32blk/Stowaway-homeassistant/actions/workflows/validate.yml/badge.svg)](https://github.com/Sat32blk/Stowaway-homeassistant/actions/workflows/validate.yml)
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/sat32blk)
 
-See and control the apps that [Stowaway](https://github.com/Sat32blk/stowaway) puts to sleep and wakes on demand, and the containers it restarts on a schedule.
+See and control the apps that [Stowaway](https://github.com/Sat32blk/Stowaway) puts to sleep and wakes on demand, and the containers it restarts on a schedule.
 
 ## What you get
 
@@ -32,7 +33,7 @@ Actions (on an app's `awake` switch):
 
 ## Install
 
-1. In HACS: **⋮ → Custom repositories**, add `https://github.com/Sat32blk/stowaway-homeassistant` as an **Integration**, then install **Stowaway** and restart Home Assistant.
+1. In HACS: **⋮ → Custom repositories**, add `https://github.com/Sat32blk/Stowaway-homeassistant` as an **Integration**, then install **Stowaway** and restart Home Assistant.
    Without HACS, copy `custom_components/stowaway` into your Home Assistant `config/custom_components/` folder.
 2. In the Stowaway dashboard: **Integrations → Home Assistant → Create token**. Copy it.
 3. In Home Assistant: **Settings → Devices & services → Add integration → Stowaway**. Enter Stowaway's address (e.g. `192.168.1.2:8880`) and the token.
@@ -90,6 +91,10 @@ automation:
 pip install pytest-homeassistant-custom-component
 pytest
 ```
+
+## Support
+
+If Stowaway saves you some resources (or some hassle), you can [buy me a coffee](https://buymeacoffee.com/sat32blk). Thank you!
 
 ## License
 
