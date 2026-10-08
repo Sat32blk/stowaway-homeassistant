@@ -1,3 +1,5 @@
+<p align="center"><img src="custom_components/stowaway/brand/icon.png" width="112" alt="Stowaway icon"></p>
+
 # Stowaway for Home Assistant
 
 [![Validate](https://github.com/Sat32blk/Stowaway-homeassistant/actions/workflows/validate.yml/badge.svg)](https://github.com/Sat32blk/Stowaway-homeassistant/actions/workflows/validate.yml)
