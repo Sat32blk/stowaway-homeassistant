@@ -75,8 +75,10 @@ def add_per_app(
     known: set[str] = set()
 
     def add_new() -> None:
+        apps = coordinator.data.apps if coordinator.data else {}
+        known.intersection_update(apps)          # removed apps can come back later
         new = []
-        for name, item in (coordinator.data.apps if coordinator.data else {}).items():
+        for name, item in apps.items():
             if name not in known:
                 known.add(name)
                 new.extend(make(coordinator, name, item))

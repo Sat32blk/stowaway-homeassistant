@@ -37,9 +37,6 @@
     "switch": {
       "awake": {
         "name": "Awake"
-      },
-      "dont_wake": {
-        "name": "Don't wake"
       }
     },
     "sensor": {
@@ -56,11 +53,17 @@
           "stopped": "Stopped"
         }
       },
-      "sleeps_at": {
-        "name": "Sleeps at"
+      "sleep_mode": {
+        "name": "Sleep mode"
       },
-      "next_restart": {
-        "name": "Next restart"
+      "cpu": {
+        "name": "CPU"
+      },
+      "memory": {
+        "name": "Memory"
+      },
+      "last_woken_by": {
+        "name": "Last woken by"
       },
       "apps_asleep": {
         "name": "Apps asleep"
@@ -70,19 +73,23 @@
       }
     },
     "binary_sensor": {
-      "maintenance_running": {
-        "name": "Maintenance running"
-      },
       "update_available": {
         "name": "Update ready"
       }
     },
-    "button": {
-      "restart": {
-        "name": "Restart now"
-      },
-      "keep_awake_hour": {
-        "name": "Keep awake 1 hour"
+    "select": {
+      "keep_awake": {
+        "name": "Keep awake",
+        "state": {
+          "off": "Off",
+          "30_minutes": "30 minutes",
+          "1_hour": "1 hour",
+          "2_hours": "2 hours",
+          "4_hours": "4 hours",
+          "8_hours": "8 hours",
+          "24_hours": "24 hours",
+          "until_released": "Until released"
+        }
       }
     }
   },
@@ -111,9 +118,13 @@
       "fields": {
         "block": {
           "name": "Don't wake",
-          "description": "Also stop visitors from waking it until it's switched back on."
+          "description": "Also stop visitors from waking it, until it's woken or the Allow waking action is used."
         }
       }
+    },
+    "allow_wake": {
+      "name": "Allow waking",
+      "description": "Let visitors wake an app again after it was put to sleep with Don't wake. It stays asleep until someone opens it."
     }
   }
 }

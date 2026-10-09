@@ -6,34 +6,37 @@
         "state": {
           "on": "mdi:power"
         }
-      },
-      "dont_wake": {
-        "default": "mdi:bell-ring-outline",
-        "state": {
-          "on": "mdi:sleep"
-        }
       }
     },
     "sensor": {
       "status": {
         "default": "mdi:docker"
       },
-      "sleeps_at": {
-        "default": "mdi:timer-sand"
-      },
-      "next_restart": {
-        "default": "mdi:calendar-refresh"
-      },
       "apps_asleep": {
         "default": "mdi:sleep"
       },
       "memory_freed": {
         "default": "mdi:memory"
+      },
+      "sleep_mode": {
+        "default": "mdi:power-sleep"
+      },
+      "cpu": {
+        "default": "mdi:cpu-64-bit"
+      },
+      "memory": {
+        "default": "mdi:memory"
+      },
+      "last_woken_by": {
+        "default": "mdi:gesture-tap"
       }
     },
-    "button": {
-      "keep_awake_hour": {
-        "default": "mdi:coffee"
+    "select": {
+      "keep_awake": {
+        "default": "mdi:coffee",
+        "state": {
+          "off": "mdi:coffee-off-outline"
+        }
       }
     }
   },
@@ -46,6 +49,9 @@
     },
     "sleep": {
       "service": "mdi:power-sleep"
+    },
+    "allow_wake": {
+      "service": "mdi:bell-ring-outline"
     }
   }
 }

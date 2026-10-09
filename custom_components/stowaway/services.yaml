@@ -30,3 +30,8 @@ sleep:
       default: false
       selector:
         boolean:
+allow_wake:
+  target:
+    entity:
+      integration: stowaway
+      domain: switch
