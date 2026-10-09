@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Connect to Stowaway",
-        "description": "Create a token in the Stowaway dashboard under **Integrations → Home Assistant → API tokens**.",
+        "description": "Create a token in the Stowaway dashboard under **System Settings → Home Assistant → API tokens** (Stowaway 1.6+) or **Integrations → Home Assistant** (older versions).",
         "data": {
           "url": "Stowaway address",
           "token": "API token",

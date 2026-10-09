@@ -37,7 +37,7 @@ Actions (on an app's `awake` switch):
 
 1. In HACS: **⋮ → Custom repositories**, add `https://github.com/Sat32blk/Stowaway-homeassistant` as an **Integration**, then install **Stowaway** and restart Home Assistant.
    Without HACS, copy `custom_components/stowaway` into your Home Assistant `config/custom_components/` folder.
-2. In the Stowaway dashboard: **Integrations → Home Assistant → Create token**. Copy it.
+2. In the Stowaway dashboard: **System Settings → Home Assistant → Create token** (Stowaway 1.6+; older versions: **Integrations → Home Assistant**). Copy it.
 3. In Home Assistant: **Settings → Devices & services → Add integration → Stowaway**. Enter Stowaway's address (e.g. `192.168.1.2:8880`) and the token.
 
 Home Assistant must be on your home network, unless you allowed the Stowaway dashboard from outside. If the token is revoked, Home Assistant asks for a new one.
